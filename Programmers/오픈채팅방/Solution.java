@@ -1,34 +1,22 @@
-package Lv2;
+package 오픈채팅방;
 
 import java.util.*;
 
-class Pair {
-    String uid;
-    char type; //Enter or Leave
-
-    public Pair(String uid, char type) {
-        this.uid = uid;
-        this.type = type;
-    }
-}
 
 
+class Solution {
 
-public class 오픈채팅방 {
+    private class Pair {
+        String uid;
+        char type; //Enter or Leave
 
-    public static void main(String[] args) {
-
-        String [] record = {"Enter uid1234 Muzi", "Enter uid4567 Prodo","Leave uid1234","Enter uid1234 Prodo","Change uid4567 Ryan"};
-
-        String [] answer = solution(record);
-
-        for(int i = 0;i<answer.length;i++){
-            System.out.println(answer[i]);
+        public Pair(String uid, char type) {
+            this.uid = uid;
+            this.type = type;
         }
-
     }
 
-    static String[] solution(String[] record) {
+    public  String[] solution(String[] record) {
         String[] answer = {};
         List<Pair> list = new ArrayList<>();
         HashMap<String, String> hm = new HashMap<>();
@@ -78,5 +66,4 @@ public class 오픈채팅방 {
 
         return answer;
     }
-
 }
